@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Information Form</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+  <form id="personal-info-form" action="#" method="POST" enctype="multipart/form-data">
+    <p>The fields marked with (*) are mandatory!</p>
+    <div class="group">
+      <div class="input">
+        <label for="fname"><b>First Name*</b></label>
+        <input type="text" name="fname" id="fname" required="required">
+      </div>
+      <div class="input">
+        <label for="mname"><b>Middle Name</b></label>
+        <input type="text" name="mname" id="mname">
+      </div>
+      <div class="input">
+        <label for="lname"><b>Last Name*</b></label>
+        <input type="text" name="lname" id="lname" required="required">
+      </div>
+    </div>
+    <div class="group">
+      <div class="input">
+        <label for="ffname"><b>Province*</b></label>
+        <input type="text" name="ffname" id="ffname" required="required">
+      </div>
+      <div class="input">
+        <label for="fmname"><b>District*</b></label>
+        <input type="text" name="fmname" id="fmname">
+      </div>
+      <div class="input">
+        <label for="flname"><b>Municipality/VDC*</b></label>
+        <input type="text" name="flname" id="flname" required="required">
+      </div>
+    </div>
+    <div class="group">
+      <div class="input">
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="input">
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="input">
+        <label for="re-enter"><b>Re-enter Password</b></label>
+        <input type="password" id="re-enter" name="re-enter">
+      </div>
+    </div>
+    <div class="group">
+      <div class="input">
+        <label for="dob_ad"><b>Date of Birth (A.D.)*</b></label>
+        <input type="date" id="dob_ad" name="dob_ad" required="required">
+      </div>
+      <div class="input">
+        <label><b>Gender</b></label>
+        <div>
+          <input type="radio" name="gender" id="male" value="male" checked>Male
+          <input type="radio" name="gender" id="female" value="female">Female
+          <input type="radio" name="gender" id="others" value="others">Others
+        </div>
+      </div>
+      <div class="input">
+        <label for="user_image"><b>User Image*</b> <a href="#" onclick="showImageModal();"><u>User Image
+              Sample</u></a></label>
+        <input type="file" id="user_image" name="user_image" required="required">
+      </div>
+    </div>
+    <div class="group">
+      <div class="input">
+        <label for="mobile"><b>Mobile Number*</b></label>
+        <input type="tel" id="mobile" name="mobile" required="required">
+      </div>
+      <!-- Buttons -->
+      <div class="button-group">
+        <button type="button" class="next-button" onclick="submitForm()">Submit</button>
+      </div>
+      <div class="input">
+        <label for="purpose"><b>Select government credential*</b></label>
+        <select id="purpose" name="purpose" onchange="updateForm()">
+          <option value="none">Choose an option</option>
+          <option value="citizenship-passport">Apply with Citizenship and Passport</option>
+          <option value="citizenship-only">Apply with Citizenship only</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Citizenship Info -->
+    <div id="citizenship-info" class="group">
+      <div class="input">
+        <label for="citizenship-number"><b>Citizenship Number*</b></label>
+        <input type="text" id="citizenship-number" name="citizenship-number" required="required">
+      </div>
+      <div class="input">
+        <label for="citizenship-issue-date"><b>Citizenship Issue Date (A.D.)*</b></label>
+        <input type="date" id="citizenship-issue-date" name="citizenship-issue-date" required="required">
+      </div>
+      <div class="input">
+        <label for="citizenship-issue-place"><b>Citizenship Issue Place*</b></label>
+        <input type="text" id="citizenship-issue-place" name="citizenship-issue-place" required="required">
+      </div>
+    </div>
+
+    <!-- Passport Info -->
+    <div id="passport-info" class="group">
+      <div class="input">
+        <label for="passport-number"><b>Passport Number*</b></label>
+        <input type="text" id="passport-number" name="passport-number">
+      </div>
+      <div class="input">
+        <label for="passport-issue-date"><b>Passport Issue Date(A.D.)*</b></label>
+        <input type="date" id="passport-issue-date" name="passport-issue-date">
+      </div>
+      <div class="input">
+        <label for="passport-expiry-date"><b>Passport Expiry Date*</b></label>
+        <input type="date" id="passport-expiry-date" name="passport-expiry-date">
+      </div>
+    </div>
+    <div class="already">
+      <a href="login.html">Already have an account?</a>
+    </div>
+    
+      
+  </form>
+
+  <!-- Modal for User Image Sample -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="sampleImage">
+  </div>
+
+  <script src="register.js"></script>
+</body>
+
+</html>

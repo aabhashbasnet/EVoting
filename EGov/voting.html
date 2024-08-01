@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+    <div class="voting-container">
+        <h2>Vote for Your Candidate</h2>
+        <form id="votingForm">
+            <div class="candidates-grid">
+                <div class="candidate">
+                    <label for="candidate1">
+                        <img src="kpba.jpeg" alt="Candidate 1" class="candidate-img">
+                        <h3>Khadga Prasad Sharma Oli</h3>
+                        <p><img src="maley.png" alt="Party A" class="party-flag"> Political Party: Unified Marxist–Leninist</p>
+                        <input type="radio" id="candidate1" name="candidate" value="Candidate 1" required>
+                    </label>
+                </div>
+                <div class="candidate">
+                    <label for="candidate2">
+                        <img src="prachi.jpg" alt="Candidate 2" class="candidate-img">
+                        <h3>Pushpa Kamal Dahal</h3>
+                        <p><img src="mawdi.png" alt="Party B" class="party-flag"> Political Party: Maoist Centre</p>
+                        <input type="radio" id="candidate2" name="candidate" value="Candidate 2">
+                    </label>
+                </div>
+                <div class="candidate">
+                    <label for="candidate3">
+                        <img src="balloon.png" alt="Candidate 3" class="candidate-img">
+                        <h3>Balendra Shah</h3>
+                        <p><img src="nepal.png" alt="Party C" class="party-flag"> Political Party: Swatantra </p>
+                        <input type="radio" id="candidate3" name="candidate" value="Candidate 3">
+                    </label>
+                </div>
+                <div class="candidate">
+                    <label for="candidate4">
+                        <img src="sucker.jpeg" alt="Candidate 4" class="candidate-img">
+                        <h3>SACAR aka Lil Buddha</h3>
+                        <p><img src="ausie.jpg" alt="Party D" class="party-flag"> Political Party: Nephop</p>
+                        <input type="radio" id="candidate4" name="candidate" value="Candidate 4">
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Submit Vote</button>
+        </form>
+    </div>
+    <script src="voting.js"></script>
+</body>
+</html>
